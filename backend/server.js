@@ -12,7 +12,7 @@ app.use(express.json());
 // app.use(clerkMiddleware());
 
 // Route imports
-import userRouter from './backend/routes/userRoutes.js'; // Registration
+import userRouter from './routes/userRoutes.js'; // Registration
 import authRoutes from './routes/authRoutes.js'; // Login
 import { router as courseRoutes, courseRouter } from './routes/courseRoutes.js'; // Courses
 import profileRoutes from './routes/profileRoutes.js'; // Profile
