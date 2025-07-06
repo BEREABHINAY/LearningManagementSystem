@@ -1,0 +1,49 @@
+.dashboard-wrapper {
+  display: flex;
+  min-height: 70vh;
+}
+
+.dashboard-sidebar {
+  width: 220px;
+  background: #2c3e50;
+  padding: 2rem 1rem;
+  border-radius: 16px 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dashboard-sidebar button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  border: none;
+  color: #ecf0f1;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+}
+
+.dashboard-sidebar button:hover,
+.dashboard-sidebar button.active {
+  background: #34495e;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 2rem;
+  background: #f9fbfc;
+  border-radius: 0 16px 16px 0;
+}
+
+.card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}

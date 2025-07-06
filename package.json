@@ -1,0 +1,24 @@
+{
+  "name": "learnity-fullstack",
+  "version": "1.0.0",
+  "description": "Learnity - Full Stack Learning Management System",
+  "main": "backend/backend/server.js",
+  "type": "module",
+  "scripts": {
+    "install-all": "npm install && cd backend/backend && npm install && cd ../../Frontend && npm install",
+    "build": "cd Frontend && npm run build",
+    "start": "npm run build && cd backend/backend && npm start",
+    "dev": "concurrently \"cd backend/backend && npm run dev\" \"cd Frontend && npm run dev\"",
+    "backend": "cd backend/backend && npm start",
+    "frontend": "cd Frontend && npm run dev"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "keywords": ["lms", "education", "react", "nodejs", "express", "mongodb"],
+  "author": "Your Name",
+  "license": "MIT"
+} 

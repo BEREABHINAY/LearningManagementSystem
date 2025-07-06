@@ -1,0 +1,174 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: white;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.navbar-left {
+  position: relative;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  list-style: none;
+  width: 200px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 999;
+}
+
+.nav-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.nav-menu li {
+  margin-bottom: 0.75rem;
+}
+
+.nav-menu li a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  color: #1abc9c;
+}
+
+.navbar-right .login-link {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.navbar-right .login-link:hover {
+  color: #1abc9c;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    left: 0;
+    right: 0;
+    width: auto;
+  }
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-right .right-link,
+.navbar-right .login-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-right .right-link:hover,
+.navbar-right .login-link:hover {
+  color: #1abc9c;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.right-link,
+.login-link,
+.logout-link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.logout-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.navbar-branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.learnity-logo {
+  height: 48px;
+  width: 48px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(26, 188, 156, 0.08);
+  object-fit: contain;
+}
+
+.learnity-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.learnity-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #1abc9c;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.learnity-tagline {
+  font-size: 0.95rem;
+  color: #f9d923;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: 0.1rem;
+  text-shadow: 0 1px 2px rgba(44, 62, 80, 0.08);
+}
+
+@media (max-width: 600px) {
+  .navbar-branding {
+    gap: 0.5rem;
+  }
+  .learnity-logo {
+    height: 36px;
+    width: 36px;
+  }
+  .learnity-title {
+    font-size: 1.1rem;
+  }
+  .learnity-tagline {
+    font-size: 0.7rem;
+  }
+}
